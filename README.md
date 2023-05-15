@@ -1,7 +1,6 @@
 
 # comamnds
 
-
 ## pull stuff
 git pull origin master
 
@@ -9,3 +8,13 @@ git pull origin master
 git add .
 git commit -m "message"
 git push origin master
+
+
+
+
+
+
+
+
+
+
