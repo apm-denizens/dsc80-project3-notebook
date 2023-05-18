@@ -38,6 +38,10 @@ Steps Taken:
 
 - Removing Team Statistic Related Rows
 
+CLEANED DF:
+
+<iframe src="./cleaned-head.html" width=800 height=600 frameBorder=0></iframe>
+
 ## Univariate Analysis
 
 Bar graph keeps track of the total amount of times a champion is used.
