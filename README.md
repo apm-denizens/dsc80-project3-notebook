@@ -88,24 +88,58 @@ HEAD OF CLEANED DF (5 rows x 97 columns):
 
 ## Univariate Analysis
 
+<iframe src="assets/champion_freq.html" width="100%" height="500px" frameBorder=0></iframe>
+
 (1st graph)
 Bar graph keeps track of the total amount of times a champion is used. We ordered the bars from least frequent to most frequent. For the champion in question, we see that Talon is only used 50 times throughout the 2022 season.
+
+<iframe src="assets/kills_histogram.html" width="100%" height="500px" frameBorder=0></iframe>
 
 (2nd graph)
 A density histogram of the frequency of kills a champion has overall in the data set. We included an overlayed density histogram for Talon specifically. Through the whole season, Talon mostly gets only 2-3 kills in a given match, which isn't too surprising as Talon usually takes the Jungle position.
 
 ## Bivariate Analysis
 
+<iframe src="assets/wins_and_losses.html" width="100%" height="500px" frameBorder=0></iframe>
+
 (1st graph)
 Bar graph that keeps track of the wins and loses that each champion has, where blue depicts the wins and red the losses. Talon in particular has 28 wins and 22 losses.
+
+<iframe src="assets/kills_vs_deaths.html" width="100%" height="500px" frameBorder=0></iframe>
 
 (2nd graph)
 We wanted to explore the relationship between the number of kills and deaths in the data set. In the scatter plot above, we see that the more kills a player has, the less deaths they have, though this association is weak as the graph isn't quite linear.
 
 ## Interesting Aggregates
 
+<div markdown="1" style="
+    display: block; 
+    /* background-color: blue;  */
+    width: 100%; 
+    overflow-x:auto
+">
+| result   |   ('earned gpm', 'bot') |   ('earned gpm', 'jng') |   ('earned gpm', 'mid') |   ('earned gpm', 'sup') |   ('earned gpm', 'top') |
+|:---------|------------------------:|------------------------:|------------------------:|------------------------:|------------------------:|
+| False    |                 257.326 |                 178.836 |                 231.934 |                 87.3538 |                 223.427 |
+| True     |                 342.339 |                 245.858 |                 302.895 |                133.629  |                 292.377 |
+</div>
+
 (1st pivot)
 Pivot table that keeps track of the average earned gpm (gold per minute) each position has, depending on if they won a match or not. As expected, the highest avergage gpm is across all positions where a match was won. In relation to our question, Talon usually takes the Jungle position whose responsibility is gaining gold and experience for the team.
+
+<div markdown="1" style="
+    display: block; 
+    /* background-color: blue;  */
+    width: 100%; 
+    overflow-x:auto
+">
+
+| side | ('kills', 'bot') | ('kills', 'jng') | ('kills', 'mid') | ('kills', 'sup') | ('kills', 'top') |
+| :--- | ---------------: | ---------------: | ---------------: | ---------------: | ---------------: |
+| Blue |          4.34667 |          3.13831 |          3.55566 |         0.894378 |          2.83309 |
+| Red  |          4.17092 |          2.97558 |          3.44723 |          0.85245 |          2.75639 |
+
+</div>
 
 (2nd pivot)
 Pivot table of average kills per position depending on if they are on the Blue or Red side of a match. Trend observed is that the Blue side gets higher kills on average across all positions.
