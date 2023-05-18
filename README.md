@@ -31,3 +31,15 @@ champion - the name of the champion a character has selected
 result - whether that player has won the match
 
 These two columns are needed to find matches related to Talon (champion) & wether Talon won or not (result).
+
+## Data Cleaning
+
+Steps Taken:
+
+- Removing Team Statistic Related Rows
+
+## Univariate Analysis
+
+Bar graph keeps track of the total amount of times a champion is used.
+
+## Bivariate Analysis
