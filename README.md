@@ -118,10 +118,12 @@ We wanted to explore the relationship between the number of kills and deaths in 
     width: 100%; 
     overflow-x:auto
 ">
-| result   |   ('earned gpm', 'bot') |   ('earned gpm', 'jng') |   ('earned gpm', 'mid') |   ('earned gpm', 'sup') |   ('earned gpm', 'top') |
-|:---------|------------------------:|------------------------:|------------------------:|------------------------:|------------------------:|
-| False    |                 257.326 |                 178.836 |                 231.934 |                 87.3538 |                 223.427 |
-| True     |                 342.339 |                 245.858 |                 302.895 |                133.629  |                 292.377 |
+
+| result | ('earned gpm', 'bot') | ('earned gpm', 'jng') | ('earned gpm', 'mid') | ('earned gpm', 'sup') | ('earned gpm', 'top') |
+| :----- | --------------------: | --------------------: | --------------------: | --------------------: | --------------------: |
+| False  |               257.326 |               178.836 |               231.934 |               87.3538 |               223.427 |
+| True   |               342.339 |               245.858 |               302.895 |               133.629 |               292.377 |
+
 </div>
 
 (1st pivot)
