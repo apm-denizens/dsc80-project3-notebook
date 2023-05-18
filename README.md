@@ -88,10 +88,24 @@ HEAD OF CLEANED DF (5 rows x 97 columns):
 
 ## Univariate Analysis
 
-Bar graph keeps track of the total amount of times a champion is used. We ordered the abrs from least used to most used. For the champion in question, we see that Talon is only used 50 times throughout the 2022 season.
+(1st graph)
+Bar graph keeps track of the total amount of times a champion is used. We ordered the bars from least frequent to most frequent. For the champion in question, we see that Talon is only used 50 times throughout the 2022 season.
+
+(2nd graph)
+A density histogram of the frequency of kills a champion has overall in the data set. We included an overlayed density histogram for Talon specifically. Through the whole season, Talon mostly gets only 2-3 kills in a given match, which isn't too surprising as Talon usually takes the Jungle position.
 
 ## Bivariate Analysis
 
+(1st graph)
 Bar graph that keeps track of the wins and loses that each champion has, where blue depicts the wins and red the losses. Talon in particular has 28 wins and 22 losses.
 
-##
+(2nd graph)
+We wanted to explore the relationship between the number of kills and deaths in the data set. In the scatter plot above, we see that the more kills a player has, the less deaths they have, though this association is weak as the graph isn't quite linear.
+
+## Interesting Aggregates
+
+(1st pivot)
+Pivot table that keeps track of the average earned gpm (gold per minute) each position has, depending on if they won a match or not. As expected, the highest avergage gpm is across all positions where a match was won. In relation to our question, Talon usually takes the Jungle position whose responsibility is gaining gold and experience for the team.
+
+(2nd pivot)
+Pivot table of average kills per position depending on if they are on the Blue or Red side of a match. Trend observed is that the Blue side gets higher kills on average across all positions.
