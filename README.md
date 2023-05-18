@@ -145,3 +145,17 @@ Pivot table that keeps track of the average earned gpm (gold per minute) each po
 
 (2nd pivot)
 Pivot table of average kills per position depending on if they are on the Blue or Red side of a match. Trend observed is that the Blue side gets higher kills on average across all positions.
+
+## NMAR Analysis
+
+State whether you believe there is a column in your dataset that is NMAR. Explain your reasoning and any additional data you might want to obtain that could explain the missingness (thereby making it MAR). Make sure to explicitly use the term “NMAR.”
+
+We believe the 'url' column may be NMAR. There are urls that exist for every competitive match, which will documenent match information. However, after checking the unique domain names in the url column, it would appear that the only the 2 sites mentioned are: lpl.qq.com & matchhistory.na.leagueoflegends.com.
+
+The missingness of the url value depends on whether there is a url for the match that is documented on one of these two sites. In other words, the missingness of the url depends on part of the url itself, i.e. the value of the url.
+
+## MCAR Analysis
+
+<iframe src="assets/ban2_by_missingness_of_ban1.html" width="100%" height="500px" frameBorder=0></iframe>
+
+<iframe src="assets/result_by_missingness_of_ban1.html" width="100%" height="500px" frameBorder=0></iframe>
