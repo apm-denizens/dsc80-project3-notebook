@@ -161,8 +161,8 @@ The missingness of the url value depends on whether there is a url for the match
 Ban1 & Ban2 are both categorical variables that take on the value of the name of a champion. As a result, to determine if the value of ban2 is related to the missingness of ban1, we need to have a test statistic that tells us how different two categorical distributions are. The TVD is an appropiate choice to use here.
 
 Our Hypotheses:
-Null Hypothesis - Missingness of ban1 does not affect the categorical distribution of ban2
-Alternative Hypothesis - Missingness of ban1 does affect the categorical distribution of ban2
+Null hypothesis - The distributions of ban2 when ban1 is missing and ban2 when ban1 isn't missing are the same.
+Alternative hypothesis - The distributions of ban2 when ban1 is missing and ban2 when ban1 isn't missing are not the same.
 
 The observed test statistic (TVD) that we calculate ends up being ~0.3599. To check to see how unusual this observed test stat is (assuming the null), we run a permutation test and simulate test statistics under the null hypothesis 100 times.
 
@@ -177,8 +177,8 @@ In other words, the missingness of ban1 is dependent on ban2. (MAR)
 This time we're checking to see if the distributions of result (Boolean True/False), are different depending on if ban1 is missing or not. In this case, result is also a categorical variable, so the TVD would remain an appropiate statistic in this case as well.
 
 Our Hypotheses:
-Null Hypothesis - Missingness of ban1 does not affect the categorical distribution of result
-Alternative Hypothesis - Missingness of ban1 does affect the categorical distribution of result
+Null hypothesis - This distributions of result when ban1 is missing and result when ban1 isn't missing are the same.
+Alternative hypothesis - This distributions of result when ban1 is missing and result when ban1 isn't missing are not the same.
 
 Our observed test statistic is ~0.00139. Once again, to figure out how unusual this test statistic is (assuming the null), we run a permutation test and simulate test statistics under the null hypothesis 100 times.
 
@@ -190,4 +190,19 @@ Subsequently, the missingness of ban1 does not depend on result.
 
 ## Hypothesis Test
 
+Going back to our question, about whether Talon is more likely to win or lose any given match. We would essentially like to know if Talon's winrate is more than 50%.
+
+Null Hypothesis: Talon's win rate is 50%
+Alternative Hypothesis: Talon's win rate is greater than 50%
+
+In this case, the test statistic
+
+Test Shatistic: Talon's proportion of matches won. This is an appropiate choice of test statistic, as larger values point towards the alternative hypothesis, and smaller values point towards the null hypothesis.
+
+Chosen Significance Level: 0.05. This means that we're willing to reject if at most 5% of our generated test statistics are more extreme than the observed test statistic. In other words, we'd be willing to accept a 5% chance of making a Type I error.
+
 <iframe src="assets/talon_win_rate.html" width="100%" height="500px" frameBorder=0></iframe>
+
+P-Value: 0.2323
+
+We fail to reject the null hypothesis @ the 0.05 significance level. It should be noted that Talon's true winrate could very well be greater than 50%, and that we are making a Type II error. However, we lack sufficient evidence to definitively support this claim. To increase our power to detect an effect, we can consider increasing our sample size by including matches from other years. However, it should be noted that Talon as a hero has likely been changed (buffs/nerfs) numerous times, so we should take interpretations about how good Talon is currently, with a grain of salt. 
