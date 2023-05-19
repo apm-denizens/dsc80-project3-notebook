@@ -158,4 +158,32 @@ The missingness of the url value depends on whether there is a url for the match
 
 <iframe src="assets/ban2_by_missingness_of_ban1.html" width="100%" height="500px" frameBorder=0></iframe>
 
+Ban1 & Ban2 are both categorical variables that take on the value of the name of a champion. As a result, to determine if the value of ban2 is related to the missingness of ban1, we need to have a test statistic that tells us how different two categorical distributions are. The TVD is an appropiate choice to use here.
+
+Our Hypotheses:
+Null Hypothesis - Missingness of ban1 does not affect the categorical distribution of ban2
+Alternative Hypothesis - Missingness of ban1 does affect the categorical distribution of ban2
+
+The observed test statistic (TVD) that we calculate ends up being ~0.3599. To check to see how unusual this observed test stat is (assuming the null), we run a permutation test and simulate test statistics under the null hypothesis 100 times.
+
+In the end, our calculated p-value ends up being exactly 0. This means that none of our simulated test statistics were ever greater than or equal to our observed test statistic.
+
+We have sufficient evidence to reject the null hypothesis. This ultimately suggests that the categorical distribution of ban2 when ban1 is missing, is different from the categorical distribution of ban2 when ban1 isn't missing.
+
+In other words, the missingness of ban1 is dependent on ban2. (MAR)
+
 <iframe src="assets/result_by_missingness_of_ban1.html" width="100%" height="500px" frameBorder=0></iframe>
+
+This time we're checking to see if the distributions of result (Boolean True/False), are different depending on if ban1 is missing or not. In this case, result is also a categorical variable, so the TVD would remain an appropiate statistic in this case as well.
+
+Our Hypotheses:
+Null Hypothesis - Missingness of ban1 does not affect the categorical distribution of result
+Alternative Hypothesis - Missingness of ban1 does affect the categorical distribution of result
+
+Our observed test statistic is ~0.00139. Once again, to figure out how unusual this test statistic is (assuming the null), we run a permutation test and simulate test statistics under the null hypothesis 100 times.
+
+In the end, our calculated p-value is 0.9. This means that 90% of simulated test statistics ended up being greater than our observed test statistic. This means that our observed test statistic is not unusual under the null.
+
+With this in mind, we fail to reject the null hyothesis. While result could still be dependent on the missingness on ban1, we don't have enough evidence to think that could be the case.
+
+Subsequently, the missingness of ban1 does not depend on result.
