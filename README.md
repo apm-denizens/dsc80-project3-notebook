@@ -4,11 +4,11 @@ Brandon Dioneda, Samuel Zhang
 
 ## Introduction and Question Identification
 
-### Provide an introduction to your dataset
+** Provide an introduction to your dataset **
 
 This dataset contains match data (win/loss, performance stats, etc.) relating to competitive League of Legends matches from the year 2022.
 
-### Clearly state the one question your analysis is centered around
+** Clearly state the one question your analysis is centered around **
 
 The question we would like to answer is: "Is Talon (tutor Costin’s favorite champion) more likely to win or lose any given match?"
 
