@@ -154,7 +154,7 @@ We believe the 'url' column may be NMAR. There are urls that exist for every com
 
 The missingness of the url value depends on whether there is a url for the match that is documented on one of these two sites. In other words, the missingness of the url depends on part of the url itself, i.e. the value of the url.
 
-## MCAR Analysis
+## Missingness Dependency
 
 <iframe src="assets/ban2_by_missingness_of_ban1.html" width="100%" height="500px" frameBorder=0></iframe>
 
